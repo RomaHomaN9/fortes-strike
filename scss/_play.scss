@@ -1,0 +1,38 @@
+body {
+	width: 100vw;
+	height: 100vh;
+}
+#canvas {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 100%;
+	max-height: 100%;
+}
+.keyboard {
+	& * {
+		background-color: #0000;
+	}
+	& > * {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-family: sans-serif;
+		font-size: 50px;
+
+		@media screen and (max-width: 1300px) {
+			font-size: 30px;
+		}
+		@media screen and (max-width: 900px) {
+			font-size: 20px;
+		}
+	}
+
+	&__player1 {
+		left: 0;
+	}
+	&__player2 {
+		right: 0;
+	}
+}
