@@ -1,11 +1,11 @@
 const logo = document.querySelector("#logo");
 const news = document.querySelector("#news");
 
-setTimeout(async () => {
-	let response = await fetch("../news.txt");
-	let data = await response.text();
-	news.innerHTML = data;
-}, 0);
+// setTimeout(async () => {
+// 	let response = await fetch("../news.txt");
+// 	let data = await response.text();
+// 	news.innerHTML = data;
+// }, 0);
 
 if (Math.random() * 3 <= 1) {
 	logo.style.backgroundImage = "url('img/fon.png')";
