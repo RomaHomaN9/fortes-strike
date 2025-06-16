@@ -2,7 +2,7 @@ const logo = document.querySelector("#logo");
 const news = document.querySelector("#news");
 
 setTimeout(async () => {
-	let response = await fetch("../news.txt");
+	let response = await fetch("https://romahoman9.github.io/fortes-strike/news.txt");
 	let data = await response.text();
 	news.innerHTML = data;
 }, 0);
