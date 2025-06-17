@@ -24,7 +24,6 @@ let player = {
 	school: {
 		woter: true,
 		wall: true,
-		flag: true,
 	},
 
 	color: "#0000ff",
@@ -61,6 +60,10 @@ let player = {
 	},
 
 	boostWrite: function () {
+		if (flag_2.get) {
+			this.speed = 0.1;
+			return;
+		}
 		if (this.boost) {
 			if (this.boostTime <= this.boostTimeMin) {
 				this.speed = 0.1;
@@ -150,7 +153,7 @@ let player = {
 		if (y == flagY && x == flagX) {
 			flag.get = true;
 			this.flagMove(flag);
-			alert(`Ти взяв прапор!}\n\nТепер ти можеш рухатися з прапором.\nДійди до своєї бази, щоб виграти гру!`);
+			alert(`Ти взяв прапор!}\n\nТепер ти можеш рухатися з прапором.\nТи не можеж бігати\nДійди до своєї бази, щоб виграти гру!`);
 		} else {
 			flag.get = false;
 			alert(`Ти не можеш взяти прапор!\n\nСпробуй підійти ближче до нього.`);
